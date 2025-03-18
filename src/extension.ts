@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage("Installing Tailwind CSS...");
 
         // Install dependencies
-        execSync("npm install --d tailwindcss @tailwindcss/vite", {
+        execSync("npm install tailwindcss @tailwindcss/vite", {
           cwd: workspacePath,
           stdio: "inherit",
         });

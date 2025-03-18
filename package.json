@@ -2,8 +2,14 @@
   "name": "setup-tailwind-for-vite",
   "displayName": "setup-tailwind-for-vite",
   "description": "Adds tailwind to a new VITE React project",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "publisher": "PM-Production",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cabalse/setup-tailwind-for-vite.git"
+  },
   "engines": {
     "vscode": "^1.98.0"
   },
