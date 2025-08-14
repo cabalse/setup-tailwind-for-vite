@@ -1,29 +1,52 @@
 # setup-tailwind-for-vite README
 
-This simple extension adds Tailwind to a new unmodified VITE React project. Run this extension when you have created a new project using "npm create vite@latest".
-The extension does the following:
+This extension adds Tailwind CSS to new VITE React projects, supporting both JavaScript and TypeScript. Run this extension when you have created a new project using "npm create vite@latest".
 
-1. Runs "npm install tailwindcss @tailwindcss/vite".
-2. Adds the following lines to vite.config.ts "import tailwindcss from '@tailwindcss/vite'" to the top of the file and "tailwindcss()," to the plugin section.
-3. Clear the index.css file and add the line "@import "tailwindcss"";
+The extension automatically detects your project type and does the following:
 
-Run the extension using the command palette [Ctrl+Shift+p] and write "Setup Tailwind: VITE"
+1. **Detects Project Type**: Automatically identifies if your project is JavaScript or TypeScript based on configuration files and dependencies.
+2. **Installs Dependencies**: Runs "npm install tailwindcss @tailwindcss/vite".
+3. **Configures Vite**:
+   - For existing projects: Modifies your vite.config.ts/js to include Tailwind
+   - For new projects: Creates a proper vite.config.ts/js with Tailwind configuration
+4. **Sets up CSS**: Creates or updates src/index.css with Tailwind imports
+5. **Creates Tailwind Config**: Generates a tailwind.config.js with proper content paths for both JS and TS files
 
 ## Features
 
-Nothing more than described above.
+- **Automatic Project Detection**: Works with both JavaScript and TypeScript React projects
+- **Smart Configuration**: Handles existing and new Vite configurations
+- **Flexible File Support**: Works with vite.config.ts, vite.config.js, or vite.config.mjs
+- **Complete Setup**: Creates all necessary configuration files if they don't exist
+- **TypeScript Aware**: Generates proper TypeScript configurations when needed
+
+## Usage
+
+Run the extension using the command palette [Ctrl+Shift+P] and type "Setup Tailwind: VITE (JS/TS)"
 
 ## Requirements
 
-Requires the React VITE project to be new and follow the template project as of VITE version 6.2.0.
+Requires a React VITE project (new or existing) that follows the template project structure as of VITE version 6.2.0.
+
+## Supported Project Types
+
+- **JavaScript React**: Projects with .js files and no TypeScript configuration
+- **TypeScript React**: Projects with .ts/.tsx files, tsconfig.json, or TypeScript dependencies
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.2.0
 
-### 1.1.0
+- Added TypeScript project support
+- Automatic project type detection
+- Support for multiple Vite config file formats (.ts, .js, .mjs)
+- Automatic creation of missing configuration files
+- Improved error handling and user feedback
+- Updated command title to reflect JS/TS support
 
-Change the script that installs Tailwind and add a run instruction in the Readme.md file
+### 1.0.0
+
+- Minor changes
 
 ### 1.0.0
 
